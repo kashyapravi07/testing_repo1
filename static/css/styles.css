@@ -1,0 +1,245 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #007bffb4; /* Blue background outside the box */
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    align-items: center; /* Center the body content */
+}
+
+/* Header Styling */
+header {
+    background-color: rgb(90, 89, 89); /* Full black background */
+    color: white;
+    text-align: center;
+    width: 100%; /* Ensure the header takes full width */
+    margin: 0; /* Remove any margins */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional subtle shadow for depth */
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #f1f1f1; /* Light grey navbar */
+    color: black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+    transition: background-color 0.3s ease;
+    opacity: .8;
+}
+
+/* Hover Effect - Dark grey background only on hover */
+nav ul li a:hover {
+    color:#0056b3;
+    opacity: 1;
+    text-decoration: underline;
+
+}
+
+/* Main Content Styling */
+main {
+    flex: 1; /* Take up all remaining space */
+    margin: 2em 0;
+    padding: 0 15px; /* Adjust for spacing on smaller screens */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the content inside the main area */
+}
+
+/* Center Box Styling */
+.center-box {
+    background-color: white; /* White background for the box */
+    padding: 2em 2em 1em 2em; /* Added padding to the top for space between heading and input fields */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /* Center the box horizontally */
+    position: relative; /* To position the heading */
+}
+
+/* Heading Styling */
+.center-box h2 {
+    text-align: center; /* Center the heading text */
+    margin: 0; /* Remove default margin */
+    position: absolute; /* Position it absolutely within the .center-box */
+    top: 0; /* Touch the top of the box */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust horizontal alignment */
+}
+
+/* Adjust the space between the heading and the content */
+.center-box h2 + form {
+    margin-top: 1em; /* Add space between the heading and the form */
+}
+
+/* Form Input and Textarea Styling */
+.center-box form input,
+.center-box form select,
+.center-box form textarea {
+    width: 100%; /* Make them take up the full width of the container */
+    padding: 0.75em; /* Add some padding for better spacing */
+    margin-bottom: 1em; /* Space between the input fields */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    border: 1px solid #ddd; /* Light border */
+    font-size: 1rem; /* Make the text a little larger for better readability */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* Button Styling */
+.center-box form button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75em 1.5em; /* Add padding to buttons */
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make the button take up full width */
+}
+
+/* Button Hover Effect */
+.center-box form button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Adjustments for input fields inside the boxes */
+.center-box input[type="text"],
+.center-box select,
+.center-box textarea {
+    max-width: 100%; /* Allow flexibility in width */
+    min-width: 100%; /* Ensure full width */
+}
+
+/* Textarea specific styling */
+.center-box form textarea {
+    height: 120px; /* Increase height for better usability */
+    resize: vertical; /* Allow resizing vertically */
+}
+
+/* Responsive Adjustments for Inputs */
+@media (max-width: 768px) {
+    .center-box form input,
+    .center-box form select,
+    .center-box form textarea {
+        padding: 0.5em; /* Adjust padding for smaller screens */
+    }
+
+    .center-box form button {
+        padding: 0.75em 1em; /* Adjust button size for smaller screens */
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    position: relative;
+    width: 100%;
+}
+
+/* Footer at the bottom of the screen */
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+
+    .center-box {
+        padding: 1em;
+    }
+}
+
+.login-heading{
+    margin-top: 5px;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input::placeholder{
+    color: #007bff;
+}
+
+.td-content{
+    height: 30px;
+    text-transform: uppercase;
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.list-group{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+.event-group{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+.attendee-name{
+    width: 230px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.attendee-event{
+    width: 450px;
+    max-width: 430px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
